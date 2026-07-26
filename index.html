@@ -1,0 +1,918 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>CLASSIFIED: Secret Invitation for Alyboo 🕷️💖</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&family=Sacramento&display=swap');
+
+    :root {
+      --girly-pink: #ff5e97;
+      --glow-pink: rgba(255, 94, 151, 0.85);
+      --hot-magenta: #ff007f;
+      --soft-lilac: #e0aaff;
+      --gwen-cyan: #00f0ff;
+      --glow-cyan: rgba(0, 240, 255, 0.7);
+      --glass-bg: rgba(20, 10, 25, 0.85);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background: #09030d;
+      min-height: 100vh;
+      min-height: -webkit-fill-available;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      overflow: hidden;
+      perspective: 1200px;
+      text-align: center;
+    }
+
+    html { height: -webkit-fill-available; }
+
+    /* BACKGROUND CYBER GRID */
+    .bg-grid {
+      position: fixed;
+      width: 200vw;
+      height: 200vh;
+      top: -50vh;
+      left: -50vw;
+      background-image: 
+        repeating-linear-gradient(120deg, rgba(255, 94, 151, 0.08), rgba(255, 94, 151, 0.08) 1px, transparent 1px, transparent 50px),
+        repeating-linear-gradient(60deg, rgba(224, 170, 255, 0.08), rgba(224, 170, 255, 0.08) 1px, transparent 1px, transparent 50px);
+      background-size: 70px 120px;
+      transform: rotateX(60deg) translateZ(-200px);
+      animation: gridMove 20s linear infinite;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    @keyframes gridMove {
+      0% { background-position: 0 0; }
+      100% { background-position: 0 350px; }
+    }
+
+    .particles {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 2;
+      background: radial-gradient(circle at 50% 50%, rgba(255, 0, 127, 0.18), transparent 70%);
+    }
+
+    /* MUSIC CONTROLLER BADGE */
+    .music-control {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      z-index: 1000;
+      background: rgba(20, 10, 25, 0.8);
+      border: 1px solid var(--girly-pink);
+      padding: 8px 14px;
+      border-radius: 20px;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 0 15px var(--glow-pink);
+      cursor: pointer;
+      backdrop-filter: blur(8px);
+    }
+
+    /* 3D SCENE & CARD CONTAINER */
+    .scene-3d {
+      width: 100%;
+      max-width: 400px;
+      height: 600px;
+      position: relative;
+      transform-style: preserve-3d;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.3s ease;
+    }
+
+    /* CAMERA SHAKE ANIMATION ON FLIP */
+    .scene-3d.shaking {
+      animation: cameraShake 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+    }
+
+    @keyframes cameraShake {
+      10%, 90% { transform: scale(0.98) translate3d(-2px, 0, 0); }
+      20%, 80% { transform: scale(1.02) translate3d(4px, -2px, 0); }
+      30%, 50%, 70% { transform: scale(0.99) translate3d(-4px, 2px, 0); }
+      40%, 60% { transform: scale(1.01) translate3d(4px, 0, 0); }
+    }
+
+    .holo-card {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1.3s cubic-bezier(0.34, 1.4, 0.64, 1);
+      animation: floatIdle 6s ease-in-out infinite;
+    }
+
+    .holo-card::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      border-radius: 30px;
+      background: linear-gradient(135deg, rgba(255,0,127,0.8), rgba(0,240,255,0.8), rgba(255,255,255,0.9));
+      opacity: 0;
+      pointer-events: none;
+      z-index: 50;
+      transition: opacity 0.3s ease;
+      mix-blend-mode: overlay;
+    }
+
+    .holo-card.flashing::after {
+      animation: holoFlash 0.6s ease-out forwards;
+    }
+
+    @keyframes holoFlash {
+      0% { opacity: 0; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.05); }
+      100% { opacity: 0; transform: scale(1); }
+    }
+
+    @keyframes floatIdle {
+      0%, 100% { transform: translateY(0px) rotateX(2deg) rotateY(-2deg); }
+      50% { transform: translateY(-12px) rotateX(-2deg) rotateY(2deg); }
+    }
+
+    .scene-3d.opened .holo-card {
+      transform: rotateY(180deg) translateZ(10px);
+      animation: floatOpened 6s ease-in-out infinite;
+    }
+
+    @keyframes floatOpened {
+      0%, 100% { transform: rotateY(180deg) translateY(0px) rotateX(-2deg); }
+      50% { transform: rotateY(180deg) translateY(-10px) rotateX(2deg); }
+    }
+
+    .card-face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 30px;
+      background: var(--glass-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 2px solid rgba(255, 94, 151, 0.4);
+      box-shadow: 
+        0 0 30px rgba(255, 94, 151, 0.3),
+        inset 0 0 25px rgba(224, 170, 255, 0.15);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 20px;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .card-face::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, transparent 50%, rgba(255, 94, 151, 0.05) 50%);
+      background-size: 100% 4px;
+      pointer-events: none;
+      z-index: 5;
+    }
+
+    /* FRONT FACE: SCROLLABLE LSM LETTER */
+    .front-face {
+      border-color: rgba(255, 0, 127, 0.6);
+      box-shadow: 0 0 35px var(--glow-pink), inset 0 0 30px rgba(255, 0, 127, 0.2);
+    }
+
+    .hud-header {
+      font-size: 0.72rem;
+      letter-spacing: 2px;
+      color: var(--soft-lilac);
+      text-transform: uppercase;
+      text-shadow: 0 0 8px var(--glow-pink);
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .arc-reactor {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 4px 0;
+      transform-style: preserve-3d;
+    }
+
+    .ring {
+      position: absolute;
+      border-radius: 50%;
+      border: 2px dashed var(--girly-pink);
+      box-shadow: 0 0 15px var(--glow-pink);
+    }
+
+    .ring-1 {
+      width: 95px; height: 95px;
+      animation: spinClockwise 10s linear infinite;
+    }
+
+    .ring-2 {
+      width: 72px; height: 72px;
+      border: 2px solid var(--gwen-cyan);
+      border-top-color: transparent;
+      box-shadow: 0 0 15px var(--glow-cyan);
+      animation: spinCounter 6s linear infinite;
+    }
+
+    @keyframes spinClockwise { 100% { transform: rotate(360deg); } }
+    @keyframes spinCounter { 100% { transform: rotate(-360deg); } }
+
+    .spider-picture {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+      z-index: 10;
+      filter: drop-shadow(0 0 10px var(--hot-magenta)) drop-shadow(0 0 18px var(--glow-pink));
+      animation: spideyGlow 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes spideyGlow {
+      0% {
+        transform: scale(0.95);
+        filter: drop-shadow(0 0 10px var(--hot-magenta)) drop-shadow(0 0 18px var(--glow-pink));
+      }
+      100% {
+        transform: scale(1.05);
+        filter: drop-shadow(0 0 16px var(--gwen-cyan)) drop-shadow(0 0 24px var(--glow-cyan));
+      }
+    }
+
+    /* SCROLLABLE LSM MESSAGE CONTAINER */
+    .lsm-container {
+      background: rgba(255, 94, 151, 0.08);
+      border: 1px dashed rgba(255, 94, 151, 0.4);
+      border-radius: 20px;
+      padding: 16px;
+      width: 100%;
+      margin: 6px 0;
+      box-shadow: inset 0 0 15px rgba(255, 0, 127, 0.1);
+      text-align: center;
+      max-height: 250px;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-behavior: smooth;
+    }
+
+    /* CUSTOM GLOWING PINK SCROLLBAR */
+    .lsm-container::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .lsm-container::-webkit-scrollbar-track {
+      background: rgba(20, 10, 25, 0.6);
+      border-radius: 10px;
+    }
+
+    .lsm-container::-webkit-scrollbar-thumb {
+      background: var(--hot-magenta);
+      border-radius: 10px;
+      box-shadow: 0 0 8px var(--glow-pink);
+    }
+
+    .lsm-title {
+      color: var(--girly-pink);
+      font-size: 1.4rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-shadow: 0 0 10px var(--glow-pink);
+    }
+
+    .lsm-text {
+      color: #f1f5f9;
+      font-size: 0.85rem;
+      line-height: 1.6;
+      font-weight: 500;
+    }
+
+    /* BUTTON WITH SHOCKWAVE EFFECT */
+    .btn-container {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+    }
+
+    .btn-stark {
+      background: linear-gradient(135deg, var(--hot-magenta), var(--girly-pink));
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 800;
+      padding: 14px 32px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 25px var(--glow-pink), 0 8px 15px rgba(0,0,0,0.4);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      z-index: 10;
+    }
+
+    .btn-stark:active {
+      transform: scale(0.92);
+      box-shadow: 0 0 15px var(--glow-pink);
+    }
+
+    /* BURST PARTICLES EFFECT */
+    .burst-particle {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      font-size: 1.5rem;
+      animation: floatOut 0.8s ease-out forwards;
+    }
+
+    @keyframes floatOut {
+      0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(0.5);
+      }
+      100% {
+        opacity: 0;
+        transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1.5) rotate(var(--rot));
+      }
+    }
+
+    /* SHOCKWAVE RING */
+    .shockwave {
+      position: fixed;
+      pointer-events: none;
+      border-radius: 50%;
+      border: 3px solid var(--hot-magenta);
+      box-shadow: 0 0 25px var(--glow-pink), inset 0 0 20px var(--glow-pink);
+      z-index: 998;
+      transform: translate(-50%, -50%) scale(0);
+      animation: shockwaveExpand 0.6s ease-out forwards;
+    }
+
+    @keyframes shockwaveExpand {
+      0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1;
+      }
+      100% {
+        width: 350px;
+        height: 350px;
+        opacity: 0;
+        border-color: var(--gwen-cyan);
+      }
+    }
+
+    /* BACK FACE */
+    .back-face {
+      transform: rotateY(180deg);
+      border-color: rgba(255, 94, 151, 0.6);
+      box-shadow: 0 0 35px var(--glow-pink), inset 0 0 30px rgba(255, 94, 151, 0.15);
+      justify-content: flex-start;
+    }
+
+    .poster-frame {
+      width: 100%;
+      height: 175px;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid var(--girly-pink);
+      box-shadow: 0 0 20px var(--glow-pink);
+      margin-top: 4px;
+      margin-bottom: 6px;
+    }
+
+    .poster-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      filter: brightness(0.92) contrast(1.05);
+      transform: scale(1.05);
+    }
+
+    .poster-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(180deg, transparent 40%, rgba(9, 3, 13, 0.95) 100%);
+    }
+
+    .movie-tag {
+      position: absolute;
+      bottom: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, var(--hot-magenta), var(--girly-pink));
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 4px 14px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 0 10px var(--glow-pink);
+      white-space: nowrap;
+    }
+
+    h1.heading-target {
+      color: #fff;
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-shadow: 0 0 12px var(--soft-lilac);
+      margin-bottom: 2px;
+    }
+
+    .sub-target {
+      color: var(--soft-lilac);
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .mission-box {
+      background: rgba(255, 94, 151, 0.08);
+      border: 1px dashed rgba(255, 94, 151, 0.4);
+      border-radius: 16px;
+      padding: 8px 12px;
+      width: 100%;
+      margin-bottom: 6px;
+    }
+
+    .mission-row {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 700;
+      margin: 2px 0;
+    }
+
+    .mission-row span {
+      color: var(--soft-lilac);
+      text-shadow: 0 0 8px var(--glow-pink);
+    }
+
+    .question-prompt {
+      color: #f1f5f9;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    /* SWEET ROMANTIC DATE PROMISE BOX */
+    .perks-box {
+      background: rgba(255, 94, 151, 0.06);
+      border: 1px solid rgba(255, 94, 151, 0.35);
+      border-radius: 16px;
+      padding: 10px 14px;
+      width: 100%;
+      margin-bottom: 10px;
+      box-shadow: inset 0 0 12px rgba(255, 94, 151, 0.1);
+    }
+
+    .treat-highlight {
+      color: var(--girly-pink);
+      font-size: 0.88rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-shadow: 0 0 8px var(--glow-pink);
+      margin-bottom: 4px;
+    }
+
+    .perks-list {
+      color: #e2e8f0;
+      font-size: 0.78rem;
+      line-height: 1.45;
+      font-weight: 500;
+    }
+
+    /* CENTERED ACTION BUTTONS */
+    .action-group {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      min-height: 52px;
+      position: relative;
+      margin-top: auto;
+    }
+
+    .btn-holo {
+      padding: 12px 24px;
+      font-size: 0.9rem;
+      font-weight: 800;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.5px;
+      touch-action: manipulation;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+    }
+
+    .btn-accept {
+      background: linear-gradient(135deg, var(--hot-magenta), var(--girly-pink));
+      color: #fff;
+      box-shadow: 0 0 20px var(--glow-pink);
+      z-index: 2;
+      min-width: 120px;
+    }
+
+    .btn-decline {
+      background: rgba(255, 255, 255, 0.12);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 94, 151, 0.4);
+      min-width: 100px;
+      transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      z-index: 3;
+      position: relative;
+    }
+
+    /* SUCCESS MODAL */
+    .hud-modal {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(9, 3, 13, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 100;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .hud-modal-content {
+      background: rgba(20, 10, 25, 0.95);
+      border: 2px solid var(--girly-pink);
+      border-radius: 28px;
+      padding: 30px 22px;
+      text-align: center;
+      max-width: 340px;
+      width: 100%;
+      box-shadow: 0 0 50px var(--glow-pink);
+      animation: modalPop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes modalPop {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    .success-badge {
+      font-size: 3.5rem;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 15px var(--glow-pink));
+    }
+
+    .hud-modal h2 {
+      color: #fff;
+      font-size: 1.6rem;
+      font-weight: 800;
+      text-shadow: 0 0 10px var(--hot-magenta);
+      margin-bottom: 8px;
+    }
+
+    .hud-modal p {
+      color: #e2e8f0;
+      font-size: 0.88rem;
+      line-height: 1.4;
+      margin-bottom: 22px;
+    }
+
+    .btn-close {
+      background: linear-gradient(135deg, var(--hot-magenta), var(--girly-pink));
+      color: #fff;
+      font-weight: 800;
+      box-shadow: 0 0 20px var(--glow-pink);
+      width: 100%;
+      max-width: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- BACKGROUND MUSIC PLAYER -->
+  <audio id="bgMusic" src="kabisado.mp3" loop preload="auto"></audio>
+
+  <!-- MUSIC CONTROL BADGE -->
+  <div class="music-control" onclick="toggleMusic()">
+    <span id="musicIcon">🎵</span>
+    <span id="musicText">Kabisado Playing</span>
+  </div>
+
+  <!-- Background Grid & Particles -->
+  <div class="bg-grid"></div>
+  <div class="particles"></div>
+
+  <!-- Hidden Canvas for Local Image Processing -->
+  <canvas id="imgCanvas" style="display:none;"></canvas>
+
+  <!-- 3D Scene Wrapper -->
+  <div class="scene-3d" id="scene3d">
+    <div class="holo-card" id="holoCard">
+      
+      <!-- FRONT FACE: SCROLLABLE LSM LETTER -->
+      <div class="card-face front-face">
+        <div class="hud-header">
+          <span>SPIDEY_SYS v4.2</span>
+          <span>FOR_ALYBOO</span>
+        </div>
+
+        <div class="arc-reactor">
+          <div class="ring ring-1"></div>
+          <div class="ring ring-2"></div>
+          <img id="spiderImage" src="spider.png" alt="Spider-Man Logo" class="spider-picture">
+        </div>
+
+        <!-- SCROLLABLE LSM MESSAGE BOX -->
+        <div class="lsm-container">
+          <div class="lsm-title">Dear Alyboo ❤️</div>
+          <p class="lsm-text">
+            The past few months have been up and down, trial and error. We do this, we do that, and here we are still intact, built together, shaping and trusting each other. You know and I know how important us is. Marami mang away, tampo, at hindi pagkakaunawaan sa isa't isa, natututo tayong intindihin ang mga bagay na 'yun mga bagay na ikaw at ako lang ang nakakaintindi at IINTINDI.
+            <br><br>
+            Kabisado ko na ang galit at tampo mo, lalo na once na wala nang bebi at mahal, at tanging "PO" na lang ang nagdudugtong sa ating mga salita. Kabisado ko na ang alis mo at uwi mo, pati ang pagkausap mo sa akin sa work mo kapag ikaw ay mag jingle bell, and how manong guard teases you kapag babalik ka na the clear "I love you" before you go back to your seat. Even though you're tired from work, you still make time for our bebi time.
+            <br><br>
+            I hope that our future will not be as dark as a black hole, and not brighter than the sun that will burn us. So this is a reminder of what we conquered and passed through for more challenging battles ahead with you hahaha I'll accept it wkwkwkwk! So better be ready, this is only the beginning of our story. Palaban pa naman tayo, LEO at TAURUS, pero nandun pa rin yung understanding sa isa't isa. I don’t believe in endless promises, but I believe in loving you for our entire lifetime and beyond. 
+            <br><br>
+            Before I end this cheezy letter the moment you entered my life, every day has felt brighter and more special. You truly mean the world to me, and I wanted to create something extra fun and memorable just for you! More play lab lab padayon taka. 🕷️✨
+          </p>
+        </div>
+
+        <div class="btn-container">
+          <button class="btn-stark" id="openBtn" onclick="triggerOpenEffect(event)">TAP TO OPEN 💌</button>
+        </div>
+
+        <div class="hud-header" style="justify-content: center; opacity: 0.7;">
+          <span>CLASSIFIED TRANSMISSION</span>
+        </div>
+      </div>
+
+      <!-- BACK FACE: MOVIE DATE INVITATION -->
+      <div class="card-face back-face">
+        <div class="hud-header">
+          <span>PROJECTION_ACTIVE</span>
+          <span>DATE_SYSTEM</span>
+        </div>
+
+        <!-- Poster Frame -->
+        <div class="poster-frame">
+          <img id="posterImage" class="poster-img" src="poster.png" alt="Spider-Man Poster">
+          <div class="poster-overlay"></div>
+          <div class="movie-tag">Spider-Man: Brand New Day</div>
+        </div>
+
+        <h1 class="heading-target">Hey Lab lab Alyboo!</h1>
+        <div class="sub-target">Will you be my Gwen Stacy for a movie date?</div>
+
+        <div class="mission-box">
+          <div class="mission-row">
+            📅 <span>Sat, August 1, 2026</span>
+          </div>
+          <div class="mission-row">
+            🍿 <span>Popcorn & Drinks Included!</span>
+          </div>
+        </div>
+
+        <div class="question-prompt">Are you free to go watch it with me?</div>
+
+        <!-- SWEET & ROMANTIC DATE PROMISE -->
+        <div class="perks-box">
+          <div class="treat-highlight">✨ Special Date Guarantee 🥰</div>
+          <div class="perks-list">
+            🍿 Unli popcorn & kwento habang nanonood<br>
+            🤍 Hawak-kamay all throughout the movie<br>
+            🍰 Kain tayo ng masarap na food pagkatapos!
+          </div>
+        </div>
+
+        <!-- CENTERED ACTION BUTTONS -->
+        <div class="action-group">
+          <button class="btn-holo btn-accept" onclick="showSuccessModal()">YES! ❤️</button>
+          <button class="btn-holo btn-decline" id="noBtn" ontouchstart="dodgeNoButton(event)" onmouseover="dodgeNoButton(event)" onclick="dodgeNoButton(event)">No 😜</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SUCCESS MODAL -->
+  <div class="hud-modal" id="hudModal">
+    <div class="hud-modal-content">
+      <div class="success-badge">🎉🥰🕸️</div>
+      <h2>YAY! IT'S A DATE!</h2>
+      <p>I knew you couldn't resist! Mark your calendar for <strong>Sat, Aug 1, 2026</strong>. It's going to be so special, Lab lab!</p>
+      <button class="btn-holo btn-close" onclick="hideSuccessModal()">CAN'T WAIT! 🕷️💖</button>
+    </div>
+  </div>
+
+  <script>
+    // DISCORD WEBHOOK INTEGRATION
+    const DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1530864574335680633/hZHsQC2der2rt3HWuT3-3pBnfOzH7k6y_j-Pk9ewVG4eMnSBYxunQ5lLljazU0RmSGoa";
+
+    function sendDiscordNotification() {
+      fetch(DISCORD_WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          content: "🎉 **MISSION ACCOMPLISHED!** 🎉\n\n**Lab lab Alyboo** clicked **YES!** ❤️\n🍿 **Movie:** *Spider-Man: Brand New Day*\n📅 **Date:** *Sat, August 1, 2026*\n🎵 **Music:** *Kabisado*\n\nGet the popcorn ready! 🕷️🕸️"
+        })
+      }).catch(err => console.log('Discord notification error:', err));
+    }
+
+    // AUDIO MANAGEMENT FOR kabisado.mp3
+    const bgMusic = document.getElementById('bgMusic');
+    let isMusicPlaying = false;
+
+    function playMusic() {
+      if (!isMusicPlaying) {
+        bgMusic.play().then(() => {
+          isMusicPlaying = true;
+          document.getElementById('musicText').innerText = "Kabisado Playing";
+          document.getElementById('musicIcon').innerText = "🎵";
+        }).catch(e => {
+          console.log("Autoplay waiting for click interaction");
+        });
+      }
+    }
+
+    function toggleMusic() {
+      if (isMusicPlaying) {
+        bgMusic.pause();
+        isMusicPlaying = false;
+        document.getElementById('musicText').innerText = "Music Paused";
+        document.getElementById('musicIcon').innerText = "🔇";
+      } else {
+        playMusic();
+      }
+    }
+
+    document.body.addEventListener('click', () => {
+      playMusic();
+    }, { once: true });
+
+    // LOCAL IMAGE CONVERTER
+    function convertToDataURL(elementId, fileSrc) {
+      const img = document.getElementById(elementId);
+      const canvas = document.getElementById('imgCanvas');
+      const ctx = canvas.getContext('2d');
+
+      const tempImg = new Image();
+      tempImg.src = fileSrc;
+
+      tempImg.onload = () => {
+        canvas.width = tempImg.width;
+        canvas.height = tempImg.height;
+        ctx.drawImage(tempImg, 0, 0);
+        try {
+          const dataURL = canvas.toDataURL('image/png');
+          img.src = dataURL;
+        } catch(e) {}
+      };
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      convertToDataURL('spiderImage', 'spider.png');
+      convertToDataURL('posterImage', 'poster.png');
+    });
+
+    function playBeep(freq = 650, duration = 0.12) {
+      try {
+        const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = audioCtx.createOscillator();
+        const gain = audioCtx.createGain();
+        osc.type = 'sine';
+        osc.frequency.value = freq;
+        gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.00001, audioCtx.currentTime + duration);
+        osc.connect(gain);
+        gain.connect(audioCtx.destination);
+        osc.start();
+        osc.stop(audioCtx.currentTime + duration);
+      } catch(e) {}
+    }
+
+    // TRANSITION OPENING EFFECT
+    function triggerOpenEffect(e) {
+      playMusic();
+
+      const rect = e.target.getBoundingClientRect();
+      const clickX = rect.left + rect.width / 2;
+      const clickY = rect.top + rect.height / 2;
+
+      const scene = document.getElementById('scene3d');
+      const holoCard = document.getElementById('holoCard');
+
+      playBeep(750, 0.12);
+      setTimeout(() => playBeep(1150, 0.25), 180);
+
+      // Shockwave
+      const shock = document.createElement('div');
+      shock.className = 'shockwave';
+      shock.style.left = clickX + 'px';
+      shock.style.top = clickY + 'px';
+      document.body.appendChild(shock);
+
+      // Particles
+      const symbols = ['💖', '✨', '🕸️', '🌸', '💫', '🕷️', '💘'];
+      for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'burst-particle';
+        p.innerText = symbols[Math.floor(Math.random() * symbols.length)];
+        p.style.left = clickX + 'px';
+        p.style.top = clickY + 'px';
+
+        const angle = (Math.PI * 2 / 20) * i + (Math.random() * 0.4);
+        const distance = 90 + Math.random() * 110;
+        const dx = Math.cos(angle) * distance + 'px';
+        const dy = Math.sin(angle) * distance + 'px';
+        const rot = (Math.random() - 0.5) * 360 + 'deg';
+
+        p.style.setProperty('--dx', dx);
+        p.style.setProperty('--dy', dy);
+        p.style.setProperty('--rot', rot);
+
+        document.body.appendChild(p);
+        setTimeout(() => p.remove(), 850);
+      }
+
+      setTimeout(() => shock.remove(), 600);
+
+      // Holographic Flash
+      holoCard.classList.add('flashing');
+
+      // Flip 3D card
+      setTimeout(() => {
+        scene.classList.add('opened');
+        scene.classList.add('shaking');
+        setTimeout(() => scene.classList.remove('shaking'), 400);
+      }, 200);
+    }
+
+    function dodgeNoButton(e) {
+      if (e) e.preventDefault();
+      playBeep(350, 0.08);
+      const btn = document.getElementById('noBtn');
+      
+      const x = (Math.random() - 0.5) * 160;
+      const y = (Math.random() - 0.5) * 110;
+      
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    }
+
+    function showSuccessModal() {
+      playBeep(880, 0.1);
+      setTimeout(() => playBeep(1320, 0.3), 100);
+      document.getElementById('hudModal').style.display = 'flex';
+
+      // TRIGGERS DISCORD NOTIFICATION
+      sendDiscordNotification();
+    }
+
+    function hideSuccessModal() {
+      playBeep(520, 0.1);
+      document.getElementById('hudModal').style.display = 'none';
+    }
+  </script>
+</body>
+</html>
